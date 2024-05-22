@@ -1,8 +1,8 @@
 import { Divider, Grid, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import AuthenticationLayout from ".";
 import ButtonComponent from "../../components/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   AppleSocialIcon,
   FacebookSocialIcon,
@@ -10,6 +10,19 @@ import {
 } from "../../assets/icons";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleClickLogin = () => {
+    if (email.includes("renter") && password === "123456") {
+      navigate("/renter");
+    } else if (email.includes("landlord") && password === "123456") {
+      navigate("/landlord");
+    } else if (email.includes("property-manager") && password === "123456") {
+      navigate("/property-manager");
+    }
+  };
   return (
     <AuthenticationLayout>
       <div>
@@ -26,6 +39,7 @@ const Login = () => {
           <Grid item md={12} className="text-center">
             <TextField
               fullWidth
+              onChange={(e) => setEmail(e.target.value)}
               sx={{ maxWidth: 378 }}
               placeholder="Enter email id"
             />
@@ -33,6 +47,7 @@ const Login = () => {
           <Grid item md={12} className="text-center">
             <TextField
               type="password"
+              onChange={(event) => setPassword(event.target.value)}
               fullWidth
               sx={{ maxWidth: 378 }}
               placeholder="Enter password"
@@ -52,6 +67,7 @@ const Login = () => {
               className={"mt-4"}
               sx={{ width: 327 }}
               title={"Sign In"}
+              onClick={handleClickLogin}
               color="secondary"
             />
 

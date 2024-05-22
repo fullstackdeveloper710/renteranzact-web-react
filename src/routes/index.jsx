@@ -18,6 +18,7 @@ import SignUp from "../pages/auth/SignUp";
 import EmailVerification from "../pages/auth/EmailVerification";
 import ForgotPassword from "../pages/auth/Forgot-password";
 import CreateNewPassword from "../pages/auth/Create-new-password";
+import RenterLandingPage from "../pages/renter";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -97,6 +98,10 @@ const AppRoutes = () => {
         {
           element: <CreateNewPassword />,
           path: "/create-password",
+        },
+        {
+          element: <RenterLandingPage />,
+          path: "/renter",
         },
       ],
     },

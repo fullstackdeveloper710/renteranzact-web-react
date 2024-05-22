@@ -29,7 +29,21 @@ import rentHistory from "./rentHistory.png";
 import facebookSocialIcon from "./facebookIcon.png";
 import googleSocialIcon from "./googleIcon.png";
 import appleSocialIcon from "./appleIcon.png";
-import arrowRight from './arrowrRight.png'
+import arrowRight from "./arrowrRight.png";
+import inspectionIcon from "./inspectionIcon.png";
+import rentApplicationIcon from "./rentApplicationIcon.png";
+import transactionHistoryIcon from "./transsactionHistoryIcon.png";
+import favouritesIcon from "./favouriteIcon.png";
+import leaseIcon from "./leaseIcon.png";
+import maintenanceIcon from "./maintainanceIcon.png";
+import electricityReacharge from "./electricityIcon.png";
+import switchToLandlordIcon from "./swicthLandlordIcon.png";
+import switchToPropertyManagerIcon from "./switchPropertyManagerIcon.png";
+import supportIcon from "./supportIcon.png";
+import logoutIcon from "./logoutIcon.png";
+import chatIcon from "./chat.png";
+import profileIcon from "./profileIcon.png";
+import notification from "./notification.png";
 
 export const MenuIcon = () => (
   <img src={menuIcon} style={{ height: 40, width: 40 }} />
@@ -103,3 +117,22 @@ export const AppleSocialIcon = () => (
     src={appleSocialIcon}
   />
 );
+
+export const InspectionIcon = () => <img src={inspectionIcon} />;
+export const RentApplicationIcon = () => <img src={rentApplicationIcon} />;
+export const TransactionHistoryIcon = () => (
+  <img src={transactionHistoryIcon} />
+);
+export const FavouriteIcon = () => <img src={favouritesIcon} />;
+export const LeaseIcon = () => <img src={leaseIcon} />;
+export const MaintenanceIcon = () => <img src={maintenanceIcon} />;
+export const ElectricityRechargeIcon = () => <img src={electricityReacharge} />;
+export const SwitchToLandlordIcon = () => <img src={switchToLandlordIcon} />;
+export const SwitchToPropertyManagerIcon = () => (
+  <img src={switchToPropertyManagerIcon} />
+);
+export const SupportIcon = () => <img src={supportIcon} />;
+export const LogoutIcon = () => <img src={logoutIcon} />;
+export const ChatIcon = () => <img src={chatIcon} />;
+export const NotifiationIcon = () => <img src={notification} />;
+export const ProfileIcon = () => <img src={profileIcon} />;

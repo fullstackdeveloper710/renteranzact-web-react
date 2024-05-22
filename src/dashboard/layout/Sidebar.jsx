@@ -1,5 +1,13 @@
-import { Divider, Drawer, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import React from "react";
+import { routesConfig } from "../../routes/routesConfig";
 
 const Sidebar = ({ open, setOpen }) => {
   return (
@@ -13,20 +21,29 @@ const Sidebar = ({ open, setOpen }) => {
       open={open}
       onClose={() => setOpen(false)}
     >
-      <List>
-        <ListItem>
-          <ListItemText primary="Item 1" />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Item 2" />
-        </ListItem>
+      <List
+        sx={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          // alignItems: "center",
+          flexDirection: "column",
+        }}
+        // className="mt-5"
+      >
+        {routesConfig.map((item, index) => {
+          return (
+            <ListItem className="m-1" key={index} sx={{ cursor: "pointer" }}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText
+                sx={{ fontSize: 18, color: "#07262E" }}
+                primary={item.title}
+              />
+            </ListItem>
+          );
+        })}
       </List>
       <Divider />
-      <List>
-        <ListItem>
-          <ListItemText primary="Logout" />
-        </ListItem>
-      </List>
     </Drawer>
   );
 };
