@@ -44,7 +44,7 @@ import logoutIcon from "./logoutIcon.png";
 import chatIcon from "./chat.png";
 import profileIcon from "./profileIcon.png";
 import notification from "./notification.png";
-
+import searchIcon from "./Search.png";
 export const MenuIcon = () => (
   <img src={menuIcon} style={{ height: 40, width: 40 }} />
 );
@@ -136,3 +136,6 @@ export const LogoutIcon = () => <img src={logoutIcon} />;
 export const ChatIcon = () => <img src={chatIcon} />;
 export const NotifiationIcon = () => <img src={notification} />;
 export const ProfileIcon = () => <img src={profileIcon} />;
+export const SearchIcon = () => (
+  <img style={{ maxWidth: "76%" }} src={searchIcon} />
+);

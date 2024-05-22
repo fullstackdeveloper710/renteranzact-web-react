@@ -8,8 +8,10 @@ import {
 } from "@mui/material";
 import React from "react";
 import { routesConfig } from "../../routes/routesConfig";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ open, setOpen }) => {
+  const navigate = useNavigate();
   return (
     <Drawer
       PaperProps={{
@@ -38,6 +40,10 @@ const Sidebar = ({ open, setOpen }) => {
               <ListItemText
                 sx={{ fontSize: 18, color: "#07262E" }}
                 primary={item.title}
+                onClick={() => {
+                  navigate(item.link);
+                  setOpen(false);
+                }}
               />
             </ListItem>
           );
