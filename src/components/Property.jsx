@@ -9,7 +9,15 @@ import {
 import React from "react";
 import { HeartIcon, LocationIcon, ShareIcon } from "../assets/icons";
 
-const Property = ({ title, location, rate, status, isFavourite, img ,price }) => {
+const Property = ({
+  title,
+  location,
+  rate,
+  status,
+  isFavourite,
+  img,
+  price,
+}) => {
   return (
     <Card elevation={0} sx={{ background: "transparent" }}>
       <Box
@@ -45,7 +53,7 @@ const Property = ({ title, location, rate, status, isFavourite, img ,price }) =>
           <div className="d-flex align-items-center gap-1">
             <Rating
               precision={1}
-              value={1}
+              value={rate}
               readOnly
               sx={{
                 "& .MuiRating-iconFilled": {
@@ -71,13 +79,13 @@ const Property = ({ title, location, rate, status, isFavourite, img ,price }) =>
           </Typography>
         </div>
         <Typography
-            fontSize={18}
-            color="#031013"
-            fontWeight={900}
-            className="mt-1"
-          >
-            {price}
-          </Typography>
+          fontSize={18}
+          color="#031013"
+          fontWeight={900}
+          className="mt-1"
+        >
+          {price}
+        </Typography>
       </CardContent>
     </Card>
   );

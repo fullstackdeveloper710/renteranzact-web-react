@@ -69,3 +69,12 @@
   width: 60% !important;
 }
 
+/* transaction history table css */
+.transactionHistory{
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  padding: 28px 13px !important;
+  color: #07262E !important;
+  border: 1px solid #B9B9B9 !important;
+  text-align: left !important;
+}
