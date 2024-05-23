@@ -1,0 +1,14 @@
+.customSpanDesign{
+    padding: 6px 8px;
+    border: 0.5px solid #DBDBDB;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-right:7px;
+}
+.customSpanDesignText{
+    font-size: 18px;
+    font-weight: 400;
+    color:#07262E;
+    margin-right: 10px;
+}

@@ -8,10 +8,16 @@ import {
 } from "@mui/material";
 import React from "react";
 import { routesConfig } from "../../routes/routesConfig";
+
+import { useNavigate } from "react-router-dom";
+
+const Sidebar = ({ open, setOpen }) => {
+
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ open, setOpen }) => {
   const location = useLocation();
+
   const navigate = useNavigate();
   return (
     <Drawer
@@ -52,6 +58,10 @@ const Sidebar = ({ open, setOpen }) => {
                   fontWeight: location.pathname === item.link ? "bold" : "",
                 }}
                 primary={item.title}
+                onClick={() => {
+                  navigate(item.link);
+                  setOpen(false);
+                }}
               />
             </ListItem>
           );
