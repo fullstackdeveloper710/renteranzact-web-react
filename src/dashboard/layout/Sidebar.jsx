@@ -9,12 +9,7 @@ import {
 import React from "react";
 import { routesConfig } from "../../routes/routesConfig";
 
-import { useNavigate } from "react-router-dom";
-
-const Sidebar = ({ open, setOpen }) => {
-
-import { useLocation, useNavigate } from "react-router-dom";
-
+import { useNavigate ,useLocation} from "react-router-dom";
 const Sidebar = ({ open, setOpen }) => {
   const location = useLocation();
 
