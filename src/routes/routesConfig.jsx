@@ -39,7 +39,7 @@ export const routesConfig = [
   },
   {
     title: "Favouries",
-    link: "/favouries",
+    link: "/favourite",
     role: ["renter"],
     icon: <FavouriteIcon />,
   },

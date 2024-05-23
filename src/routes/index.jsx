@@ -26,6 +26,11 @@ import PropertiesInDemand from "../pages/renter/properties-in-demand";
 import RentedProperties from "../pages/renter/rentedProperties";
 import RentedPropertyDetail from "../pages/renter/rentedProperties/detail";
 import RentApplications from "../pages/renter/rent-application";
+import TransactionHistory from "../pages/renter/transaction-history";
+import Favourites from "../pages/renter/favourites";
+import LeaseAgrement from "../pages/renter/lease-agrement";
+import MaintainceRequest from "../pages/renter/maintaince-request";
+import MaintainceRequestDetails from "../pages/renter/maintaince-request/maintainceRequestDetail";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -131,6 +136,26 @@ const AppRoutes = () => {
         {
           element: <RentedPropertyDetail />,
           path: "/rented-property-detail",
+        },
+        {
+          element: <TransactionHistory />,
+          path: "/transaction-history",
+        },
+        {
+          element: <Favourites />,
+          path: "/favourite",
+        },
+        {
+          element: <LeaseAgrement />,
+          path: "/lease-agreement",
+        },
+        {
+          element: <MaintainceRequest />,
+          path: "/maintenance-requests",
+        },
+        {
+          element: <MaintainceRequestDetails />,
+          path: "/maintenance-requests-details",
         },
       ],
     },
