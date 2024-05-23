@@ -12,9 +12,13 @@ import rented from "../../../assets/images/rented.png";
 import { ChatIcon, LocationIcon, RatingIcon } from "../../../assets/icons";
 import ButtonComponent from "../../../components/Button";
 import LeavePropertyModal from "./leavePropertyModal";
+import MaintenanceRequestModal from "./maintenanceModal";
+import ReviewPropertiesModal from "./reviewPropertiesModal";
 
 const RentedPropertyDetail = () => {
   const [openLeaveDialog, setOpenLeaveDialog] = useState(false);
+  const [maintenanceRequestModal, setMaintenanceRequestModal] = useState(false);
+
   return (
     <Container maxWidth="xl">
       <div className="my-3">
@@ -156,6 +160,7 @@ const RentedPropertyDetail = () => {
             color={"primary"}
             title={"Raise a query"}
             sx={{ width: "100%", height: 64, borderRadius: 2 }}
+            onClick={() => setMaintenanceRequestModal(true)}
           />
           <Box
             className="d-flex justify-content-between align-items-center"
@@ -192,10 +197,19 @@ const RentedPropertyDetail = () => {
           </Box>
         </Grid>
       </Grid>
-      {
-        openLeaveDialog &&
-        <LeavePropertyModal  open={openLeaveDialog} setOpen={setOpenLeaveDialog}/>
-      }
+      {openLeaveDialog && (
+        <LeavePropertyModal
+          open={openLeaveDialog}
+          setOpen={setOpenLeaveDialog}
+        />
+      )}
+      {maintenanceRequestModal && (
+        <MaintenanceRequestModal
+          open={maintenanceRequestModal}
+          setOpen={setMaintenanceRequestModal}
+        />
+      )}
+    
     </Container>
   );
 };
