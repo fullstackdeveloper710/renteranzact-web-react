@@ -9,7 +9,7 @@ import {
 import React from "react";
 import { HeartIcon, LocationIcon, ShareIcon } from "../assets/icons";
 
-const Property = ({ title, location, rate, status, isFavourite, img }) => {
+const Property = ({ title, location, rate, status, isFavourite, img ,price }) => {
   return (
     <Card elevation={0} sx={{ background: "transparent" }}>
       <Box
@@ -70,6 +70,14 @@ const Property = ({ title, location, rate, status, isFavourite, img }) => {
             {location}
           </Typography>
         </div>
+        <Typography
+            fontSize={18}
+            color="#031013"
+            fontWeight={900}
+            className="mt-1"
+          >
+            {price}
+          </Typography>
       </CardContent>
     </Card>
   );
