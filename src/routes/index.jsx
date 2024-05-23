@@ -31,6 +31,8 @@ import Favourites from "../pages/renter/favourites";
 import LeaseAgrement from "../pages/renter/lease-agrement";
 import MaintainceRequest from "../pages/renter/maintaince-request";
 import MaintainceRequestDetails from "../pages/renter/maintaince-request/maintainceRequestDetail";
+import ELectiricityRecharge from "../pages/renter/electricity-recharge";
+import Support from "../pages/renter/suppport";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -156,6 +158,14 @@ const AppRoutes = () => {
         {
           element: <MaintainceRequestDetails />,
           path: "/maintenance-requests-details",
+        },
+        {
+          element: <ELectiricityRecharge />,
+          path: "/electricity-recharge",
+        },
+        {
+          element: <Support />,
+          path: "/support",
         },
       ],
     },
