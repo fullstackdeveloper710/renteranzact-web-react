@@ -44,13 +44,13 @@ import logoutIcon from "./logoutIcon.png";
 import chatIcon from "./chat.png";
 import profileIcon from "./profileIcon.png";
 import notification from "./notification.png";
-
+import downloadIcon from "./downloadIcon.png"
 import searchIcon from "./Search.png";
-
+import eyeIcon from "./eye.png"
 import filterIcon from './filterIcon.png'
 import rating from './rating.png'
-
-
+import upload from "./upload.png"
+import remove from "./removeIcon.png"
 export const MenuIcon = () => (
   <img src={menuIcon} style={{ height: 40, width: 40 }} />
 );
@@ -150,4 +150,7 @@ export const SearchIcon = () => (
 export const FilterIcon = () => <img src={filterIcon} />;
 
 export const RatingIcon = () => <img src={rating} />
-
+export const DownloadIcon = ()=> <img src={downloadIcon}/>
+export const eyeViewIcon = ()=> <img src={eyeIcon} />
+export const uploadIcon = ()=> <img src={upload} />
+export const removeIcon = ()=> <img src={remove} />
