@@ -53,10 +53,6 @@ const Sidebar = ({ open, setOpen }) => {
                   fontWeight: location.pathname === item.link ? "bold" : "",
                 }}
                 primary={item.title}
-                onClick={() => {
-                  navigate(item.link);
-                  setOpen(false);
-                }}
               />
             </ListItem>
           );

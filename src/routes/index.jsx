@@ -21,12 +21,11 @@ import CreateNewPassword from "../pages/auth/Create-new-password";
 import RenterLandingPage from "../pages/renter";
 
 import MyInspections from "../pages/renter/my-inspections";
-import RentApplications from "../pages/renter/rent-application";
 
 import PropertiesInDemand from "../pages/renter/properties-in-demand";
 import RentedProperties from "../pages/renter/rentedProperties";
 import RentedPropertyDetail from "../pages/renter/rentedProperties/detail";
-
+import RentApplications from "../pages/renter/rent-application";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -112,7 +111,6 @@ const AppRoutes = () => {
           path: "/renter",
         },
         {
-
           element: <MyInspections />,
           path: "/my-inspections",
         },
@@ -120,6 +118,9 @@ const AppRoutes = () => {
           element: <RentApplications />,
           path: "/rent-applications",
 
+         
+        },
+        {
           element: <PropertiesInDemand />,
           path: "/properties-in-demand",
         },
@@ -130,7 +131,6 @@ const AppRoutes = () => {
         {
           element: <RentedPropertyDetail />,
           path: "/rented-property-detail",
-
         },
       ],
     },
