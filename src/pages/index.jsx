@@ -39,13 +39,14 @@ import Property from "../components/Property";
 import renting from "../assets/images/renting.png";
 import require from "../assets/images/require.png";
 let slides = [madeEasy, homeBanner];
-const properties = [
+export const properties = [
   {
     status: "Available",
     isFavourite: true,
     rate: 4.7,
     title: "Golden Tierra Apartments",
     location: "45 Kofa Annan St, Lagos",
+    price: "₦ 7,923/ monthly",
   },
   {
     status: "Rented",
@@ -53,6 +54,7 @@ const properties = [
     rate: 4.7,
     title: "Bakare Estate",
     location: "Bakare Estate, Agungi, Lekki, Lagos",
+    price: "₦ 7,923/ monthly",
   },
   {
     status: "Available",
@@ -60,6 +62,7 @@ const properties = [
     rate: 4.7,
     title: "Naf Valley Estate",
     location: "Naf Valley Estate, Asokoro District, Abuja",
+    price: "₦ 7,923/ monthly",
   },
 ];
 
@@ -331,39 +334,40 @@ const HomePage = () => {
         </Grid>
 
         <Grid container className="mt-5">
-        <Grid
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          item
-          md={6}
-          sx={{ background: "white" }}
-        >
-          <div className="d-flex flex-column justify-content-center gap-2">
-            <Typography
-              color={theme.palette.text.primary}
-              fontSize={40}
-              fontWeight={500}
-            >
-              Try Us On Apps
-            </Typography>
-            <Typography fontSize={18}>
-              Surf through exclusive homes for monthly and yearly stays, and
-              catch
-              <br /> the wave of hassle-free renting. Try our Rental Management
-              tools on <br /> mobile app and elevate your rental journey today!
-            </Typography>
-            <div className="mt-3">
-              <img src={googlePlay} />
-              &nbsp;&nbsp;&nbsp;
-              <img src={apple} />
+          <Grid
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            item
+            md={6}
+            sx={{ background: "white" }}
+          >
+            <div className="d-flex flex-column justify-content-center gap-2">
+              <Typography
+                color={theme.palette.text.primary}
+                fontSize={40}
+                fontWeight={500}
+              >
+                Try Us On Apps
+              </Typography>
+              <Typography fontSize={18}>
+                Surf through exclusive homes for monthly and yearly stays, and
+                catch
+                <br /> the wave of hassle-free renting. Try our Rental
+                Management tools on <br /> mobile app and elevate your rental
+                journey today!
+              </Typography>
+              <div className="mt-3">
+                <img src={googlePlay} />
+                &nbsp;&nbsp;&nbsp;
+                <img src={apple} />
+              </div>
             </div>
-          </div>
+          </Grid>
+          <Grid item md={6}>
+            <img src={man} style={{ width: "100%" }} />
+          </Grid>
         </Grid>
-        <Grid item md={6}>
-          <img src={man} style={{ width: "100%" }} />
-        </Grid>
-      </Grid>
       </Container>
     </>
   );

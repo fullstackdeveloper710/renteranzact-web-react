@@ -8,8 +8,11 @@ import {
 } from "@mui/material";
 import React from "react";
 import { routesConfig } from "../../routes/routesConfig";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ open, setOpen }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <Drawer
       PaperProps={{
@@ -33,10 +36,21 @@ const Sidebar = ({ open, setOpen }) => {
       >
         {routesConfig.map((item, index) => {
           return (
-            <ListItem className="m-1" key={index} sx={{ cursor: "pointer" }}>
+            <ListItem
+              LinkComponent={"a"}
+              onClick={() => navigate(item.link)}
+              className="m-1"
+              key={index}
+              sx={{ cursor: "pointer" }}
+            >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText
-                sx={{ fontSize: 18, color: "#07262E" }}
+                sx={{
+                  fontSize: 18,
+                  color:
+                    location.pathname === item.link ? "#009DA6" : "#07262E",
+                  fontWeight: location.pathname === item.link ? "bold" : "",
+                }}
                 primary={item.title}
               />
             </ListItem>
